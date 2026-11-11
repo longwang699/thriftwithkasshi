@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THRIFT WITH KASSHI | Streetwear Culture</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- ANNOUNCEMENT BAR -->
+    <div class="announcement">
+        STREETWEAR CULTURE. NO LIMITS. WELCOME TO KASSHI.
+    </div>
+
+    <!-- NAVIGATION -->
+    <header class="navbar">
+        <a href="#" class="logo">
+            KASSHI<span>®</span>
+        </a>
+
+        <nav class="nav-links">
+            <a href="#home">HOME</a>
+            <a href="#collections">COLLECTIONS</a>
+            <a href="#new-arrivals">NEW ARRIVALS</a>
+            <a href="#about">ABOUT</a>
+            <a href="#delivery">DELIVERY</a>
+            <a href="#contact">CONTACT</a>
+        </nav>
+
+        <a href="#collections" class="shop-button">SHOP NOW ↗</a>
+    </header>
+
+    <!-- HERO SECTION -->
+    <main>
+
+        <section class="hero" id="home">
+
+            <div class="hero-content">
+
+                <p class="hero-label">
+                    EST. 2026 / STREETWEAR CULTURE
+                </p>
+
+                <h1>
+                    THRIFT<br>
+                    WITH<br>
+                    <span>KASSHI.</span>
+                </h1>
+
+                <p class="hero-description">
+                    Discover your style. Own your culture.
+                    Retro jerseys, baggy denim, graphic tees
+                    and jackets.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#collections" class="primary-button">
+                        EXPLORE COLLECTION ↗
+                    </a>
+
+                    <a href="#about" class="secondary-button">
+                        OUR STORY
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="hero-image">
+
+                <div class="image-overlay">
+                    <span>THE STREETWEAR EDIT</span>
+                    <span>01 / 04</span>
+                </div>
+
+            </div>
+
+            <div class="hero-side-text">
+                WEAR YOUR CULTURE — KASSHI
+            </div>
+
+        </section>
+
+        <!-- CATEGORY SECTION -->
+        <section class="collections" id="collections">
+
+            <div class="section-heading">
+                <div>
+                    <p class="section-label">FIND YOUR STYLE</p>
+                    <h2>THE COLLECTIONS<span>.</span></h2>
+                </div>
+
+                <p>FOUR CATEGORIES. ONE CULTURE.</p>
+            </div>
+
+            <div class="category-grid">
+
+                <a href="#new-arrivals" class="category-card jerseys">
+                    <div class="category-info">
+                        <span>01 / FOOTBALL CULTURE</span>
+                        <h3>JERSEYS</h3>
+                        <p>SHOP COLLECTION ↗</p>
+                    </div>
+                </a>
+
+                <a href="#new-arrivals" class="category-card denim">
+                    <div class="category-info">
+                        <span>02 / EVERYDAY FITS</span>
+                        <h3>DENIM</h3>
+                        <p>SHOP COLLECTION ↗</p>
+                    </div>
+                </a>
+
+                <a href="#new-arrivals" class="category-card tees">
+                    <div class="category-info">
+                        <span>03 / GRAPHIC CULTURE</span>
+                        <h3>GRAPHIC TEES</h3>
+                        <p>SHOP COLLECTION ↗</p>
+                    </div>
+                </a>
+
+                <a href="#new-arrivals" class="category-card jackets">
+                    <div class="category-info">
+                        <span>04 / OUTERWEAR</span>
+                        <h3>JACKETS</h3>
+                        <p>SHOP COLLECTION ↗</p>
+                    </div>
+                </a>
+
+            </div>
+
+        </section>
+
+        <!-- SHOPPING CATALOGUE -->
+<section class="new-arrivals" id="new-arrivals">
+
+    <p class="section-label">FRESH FINDS / 2026</p>
+
+    <h2>THE LATEST DROPS<span>.</span></h2>
+
+    <p>
+        Discover unique pieces. Find your next favourite fit.
+    </p>
+
+    <!-- SEARCH -->
+    <div class="catalogue-search">
+        <input
+            type="text"
+            id="productSearch"
+            placeholder="Search jerseys, jeans, tees..."
+        >
+    </div>
+
+    <!-- CATEGORY FILTERS -->
+    <div class="filter-container">
+
+        <button class="filter-btn active" data-category="all">
+            ALL ITEMS
+        </button>
+
+        <button class="filter-btn" data-category="jerseys">
+            JERSEYS
+        </button>
+
+        <button class="filter-btn" data-category="denim">
+            BAGGY JEANS
+        </button>
+
+        <button class="filter-btn" data-category="tees">
+            GRAPHIC TEES
+        </button>
+
+<button class="filter-btn" data-category="bottoms">
+    BOTTOMS
+</button>
+    </div>
+
+    <!-- PRODUCTS WILL APPEAR HERE -->
+    <div class="product-grid" id="productGrid">
+
+    <div class="empty-products">
+        <h3>THE COLLECTION IS LOADING.</h3>
+        <p>Our latest pieces will appear here.</p>
+    </div>
+
+</div>
+
+
+<!-- PRODUCT DETAILS MODAL -->
+<div class="product-modal" id="productModal">
+
+    <div class="modal-content">
+
+        <button class="modal-close" id="closeModal">
+            &times;
+        </button>
+
+        <div class="modal-image">
+            <img src="" id="modalImage" alt="Product image">
+        </div>
+
+        <div class="modal-details">
+
+            <span id="modalCategory"></span>
+
+            <h2 id="modalName"></h2>
+
+            <h3 id="modalPrice"></h3>
+
+            <p id="modalDescription"></p>
+
+            <label for="modalSize">SELECT SIZE</label>
+
+            <select id="modalSize">
+                <option value="">Choose size</option>
+            </select>
+
+            <button id="addToCartBtn">ADD TO CART 🛒</button>
+<button id="modalOrder">ORDER VIA WHATSAPP ↗</button>
+        </div>
+
+    </div>
+
+</div>
+</section>
+       <!-- ABOUT -->
+<section class="about" id="about">
+
+    <p class="section-label">MORE THAN JUST CLOTHING / OUR STORY</p>
+
+    <h2>
+        STYLE IS<br>
+        AN <span>ATTITUDE.</span>
+    </h2>
+
+    <p>
+        THRIFT WITH KASSHI is more than a clothing store.
+        It's a space for individuality, creativity and
+        fearless self-expression.
+
+        From timeless retro jerseys to everyday streetwear,
+        we bring you unique pieces that let your style speak
+        without saying a word.
+    </p>
+
+    <h3>WEAR YOUR CULTURE. MAKE YOUR STATEMENT.</h3>
+
+    <a href="#new-arrivals" class="about-btn">EXPLORE THE COLLECTION ↗</a>
+<!-- DELIVERY & PAYMENT -->
+<section class="delivery-info" id="delivery">
+
+    <p class="section-label">SHOP WITH CONFIDENCE / KASSHI SERVICE</p>
+
+    <h2>DELIVERY & <span>PAYMENT.</span></h2>
+
+    <div class="delivery-grid">
+
+        <div class="delivery-card">
+            <h3>🚚 FREE DELIVERY</h3>
+            <p>
+                We currently offer free delivery within Nairobi.
+                Get your favourite streetwear delivered to you.
+            </p>
+        </div>
+
+        <div class="delivery-card">
+            <h3>📍 AROUND NAIROBI </h3>
+            <p>
+                Our delivery service is currently available
+                within Nairobi. More locations coming soon.
+            </p>
+        </div>
+
+        <div class="delivery-card">
+            <h3>💳 M-PESA PAYMENT</h3>
+            <p>
+                Pay conveniently through M-Pesa.
+                Contact us to confirm payment details when ordering.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+</section>
+    </main>
+
+    <!-- FOOTER -->
+     <!-- CONTACT SECTION -->
+<section class="contact-section" id="contact">
+
+    <p class="section-label">LET'S CONNECT / KASSHI COMMUNITY</p>
+
+    <h2>GET IN <span>TOUCH.</span></h2>
+
+    <p class="contact-description">
+        Got questions about a piece? Need help with an order?
+        We're just a message away.
+    </p>
+
+    <div class="contact-buttons">
+
+        <a href="https://wa.me/254728359964"
+           target="_blank"
+           class="contact-btn whatsapp-btn">
+            WHATSAPP US ↗
+        </a>
+
+        <a href="https://www.instagram.com/_.newt0n._/"
+           target="_blank"
+           class="contact-btn instagram-btn">
+            FOLLOW ON INSTAGRAM ↗
+        </a>
+
+    </div>
+
+</section>
+    <footer>
+
+        <h2>KASSHI<span>®</span></h2>
+
+        <p>YOUR STYLE. YOUR LIFE.</p>
+
+        <p class="copyright">
+            © 2026 THRIFT WITH KASSHI. ALL RIGHTS RESERVED.
+        </p>
+
+    </footer>
+
+   <!-- SHOPPING CART BUTTON -->
+<button class="cart-toggle" id="cartToggle">
+    🛒 CART <span id="cartCount">0</span>
+</button>
+
+<!-- SHOPPING CART PANEL -->
+<div class="cart-panel" id="cartPanel">
+    <div class="cart-header">
+        <h2>YOUR CART</h2>
+        <button id="closeCart">&times;</button>
+    </div>
+
+    <div class="cart-items" id="cartItems">
+        <p class="cart-empty">Your cart is currently empty.</p>
+    </div>
+
+    <div class="cart-footer">
+        <div class="cart-total">
+            <span>TOTAL</span>
+            <strong id="cartTotal">KSh 0</strong>
+        </div>
+
+        <button id="checkoutBtn">
+            CHECKOUT VIA WHATSAPP ↗
+        </button>
+    </div>
+</div> 
+<script src="script.js"></script>
+<footer class="footer">
+    <div class="footer-content">
+
+        <div class="footer-brand">
+            <h2>THRIFT WITH KASSHI</h2>
+            <p>Fashion without limits. Your style, your story. Discover your next favourite streetwear piece.</p>
+        </div>
+
+        <div class="footer-links">
+            <h3>Quick Links</h3>
+            <a href="index.html">Home</a>
+            <a href="#products">Shop</a>
+            <a href="#about">About Us</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 THRIFT WITH KASSHI. All rights reserved.</p>
+    </div>
+</footer>
+</body>
+</html>
